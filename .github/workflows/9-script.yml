@@ -8,6 +8,9 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            - name: checkout branch
+              uses: actions/checkout@v4
+              
             - name: script workflow
               run: echo "Script workflow"
 
