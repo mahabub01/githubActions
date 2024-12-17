@@ -1,0 +1,21 @@
+name: Predefind Action workflow
+
+on:
+    workflow_dispatch:
+
+jobs:
+    predefind-workflow:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Node Version check
+              run: node -v
+
+            - name: Setup Node Js
+              uses: action/setup-node@v4
+              with:
+                node-version: '20'
+
+            - name: Node Version check
+              run: node -v
+              
