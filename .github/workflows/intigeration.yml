@@ -1,0 +1,16 @@
+name: "Simple Integration"
+
+on: [push]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: step 1
+        run: | 
+          echo "step 1"
+          echo "Step 2"
+
+          
+  
