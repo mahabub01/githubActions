@@ -1,0 +1,31 @@
+name: Conditional Multi Job workflow
+
+on:
+    push:
+        paths:
+            - "backend/**"
+            
+
+        
+jobs:
+    building-project:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: npm install
+              run: echo "npm install"
+
+            - name: build project
+              run: echo "build product"
+    
+
+    deploy-project:
+        runs-on: ubuntu-latest
+        needs: [building-project]
+        
+        steps:
+            - name: connect aws server
+              run: echo "connect aws server"
+        
+            - name: deploy project
+              run: echo "deploy project"
