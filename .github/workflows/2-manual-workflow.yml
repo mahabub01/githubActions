@@ -5,7 +5,7 @@ on:
 
 
 jobs:
-    build:
+    manual-workflow:
         runs-on: ubuntu-latest
         steps:
             - name: first step
